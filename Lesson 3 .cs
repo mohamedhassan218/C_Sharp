@@ -27,6 +27,26 @@ public class HelloWorld
         
         Console.WriteLine(5 / 3.0);     //Prints: 1.666666666667
     
+
+        int numberOne = 12932;
+        int numberTwo = -2828472;
+        double numberOneSqrt = Math.Sqrt(numberOne);
+        Console.WriteLine(numberOneSqrt); //Prints: 113.718951806636.
+        
+        double numberTwoSqrt = Math.Sqrt(numberTwo);
+        Console.WriteLine(numberTwoSqrt); //Prints: NaN.
+        // NaN stands for “Not a Number” in C#. 
+        //This happens because the built-in method Math.Sqrt() can only take a
+        //positive number as a value, but the value of numberTwo is negative.
+
+        numberTwoSqrt = Math.Floor(Math.Sqrt(Math.Abs(numberTwo)));
+        Console.WriteLine(numberTwoSqrt); //Prints: 1681.
+        
+
+        //U can also use the built-in methods:
+        //Math.Pow(), Math.Min(), Math.Max(), Math.Ceiling()
+        //Note: the letters are in uppercase.
+        
         
         
     }
