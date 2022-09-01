@@ -39,7 +39,31 @@ public class HelloWorld
         Console.WriteLine(Array.Find(players, HitGround));//Prints: Mo salah
         //with lambda:
         Console.WriteLine(Array.Find(players, (string word) => word == "Mo salah"));//prints: Mo salah
-                    
+
+
+        //more shortcuts with the lambda expressions:
+        
+        
+        //the normal lambda expression:
+        bool hasEvenNumber1 = Array.Exists(numbers, (int number) => number % 2 == 0);
+        
+        //here we removed the data type:
+        bool hasEvenNumber2 = Array.Exists(numbers, (num) => num % 2 == 0);
+        
+        //here we removed the data type and the parentheses:
+        bool hasEvenNumber3 = Array.Exists(numbers, num => num % 2 == 0);
+        
+        Console.WriteLine(hasEvenNumber1);//Prints: true 
+        Console.WriteLine(hasEvenNumber2);//Prints: true 
+        Console.WriteLine(hasEvenNumber3);//Prints: true 
+        
+        //////////////////////////////////////////////////////////////////////////////
+        //Review:
+        //Expression-bodied definition can be used for one-line methhod bodies.
+        //Lambda expressions can be used to create an anonymous method.
+        
+
+
         
     }
     
